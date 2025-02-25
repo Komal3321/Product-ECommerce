@@ -3,188 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RedStore - eCommerce</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background: linear-gradient(to right, #f8dcdc, #fff);
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .logo span {
-            color: red;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-        .products-section {
-            padding: 50px;
-            text-align: center;
-        }
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            padding: 20px;
-        }
-        .product {
-            text-align: center;
-        }
-        .product img {
-            width: 200px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .product h3 {
-            margin: 10px 0;
-        }
-        .product p {
-            color: red;
-            font-weight: bold;
-        }
-        .add-to-cart {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: green;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .add-to-cart :hover{
-            color:orange;
-        }
-        .view-product {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: green;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .view-product {
-            background: orange;
-        }
-    </style>
-    
+    <title>MyStore - eCommerce</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
+<body>
+
 <header>
     <nav>
         <div class="logo">MY<span>STORE</span></div>
         <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
-   
             <li><a href="contact.html">Contact</a></li>
-          
         </ul>
     </nav>
 </header>
-    <section class="products-section">
-        <h2>All Products</h2>
-        <div class="products-grid">
-            <div class="product">
-                <img src="t1.jpg" alt="Red Printed T-Shirt">
-                <h3>Red Printed T-Shirt</h3>
-                <p>$50.00</p>
-                <a href="#" class="add-to-cart">Add to Cart</a>
-                <a href="#" class="view-product">View Product</a>
 
+<section class="products-section">
+    <h2>All Products</h2>
+    <div class="products-grid">
 
-            </div>
-            <div class="product">
-                <img src="t2.webp" alt="HRX Sports Shoes">
-                <h3>HRX Sports Shoes</h3>
-                <p>$75.00</p>
-                <a href="#" class="add-to-cart">Add to Cart</a>
-                <a href="#" class="view-product">View Product</a>
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="t1.jpg" alt="Red Printed T-Shirt">
+            <h3>Red Printed T-Shirt</h3>
+            <p>$250.00</p>
+            <button class="add-to-cart">Add to Cart</button><br>
+            <button class="quick-view" onclick="openPopup('popup')">Quick View</button>
 
-
-            </div>
-            <div class="product">
-                <img src="t3.webp" alt="HRX Gray Trackpants">
-                <h3>HRX Gray Trackpants</h3>
-                <p>$45.00</p>
-                <a href="#" class="add-to-cart">Add to Cart</a>
-                <a href="#" class="view-product">View Product</a>
-
-
-            </div>
-            <div class="product">
-                <img src="t4.jpeg"  alt="Blue Printed T-Shirt">
-                <h3>Blue Printed T-Shirt</h3>
-                <p>$55.00</p>
-                <a href="#" class="add-to-cart">Add to Cart</a>
-                <a href="#" class="view-product">View Product</a>
-
-
-            </div>
-               <div class="product">
-                <img src="b1.webp" alt="Sports Bottle">
-                <h3>Sports Bottle</h3>
-                <p>$50.00</p>
-                <a href="#" class="add-to-cart">Add to Cart</a>
-                <a href="#" class="view-product">View Product</a>
-
-
-            </div>
-            <div class="product">
-                <img src=k1.webp alt="Knee Cap">
-                <h3>Knee Cap</h3>
-                <p>$75.00</p>
-                <a href="#" class="add-to-cart">Add to Cart</a>
-                <a href="#" class="view-product">View Product</a>
-
-
-            </div>
-            <div class="product">
-                <img src="h1.jpg" alt="Handgloves">
-                <h3>Handgloves</h3>
-                <p>$45.00</p>
-                <a href="#" class="add-to-cart">Add to Cart</a>
-                <a href="#" class="view-product">View Product</a>
-                
-
-
-            </div>
-            <div class="product">
-                <img src="c1.jpeg"  alt="Cap">
-                <h3>Cap</h3>
-                <p>$55.00</p>
-                <a href="#" class="add-to-cart">Add to Cart</a>
-                <a href="#" class="view-product">View Product</a>
-
-
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('popup')">&times;</span>
+                    <img src="t1.jpg" alt="Red Printed T-Shirt">
+                    <h2>Red Printed T-Shirt</h2>
+                    <p>A stylish and comfortable red printed t-shirt, perfect for casual outings.</p>
+                    <p class="price">$250.00</p>
+                </div>
             </div>
         </div>
-    </section>
-   
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="t2.webp" alt="HRX Sports Shoes">
+            <h3>HRX Sports Shoes</h3>
+            <p>$575.00</p>
+            <button class="add-to-cart">Add to Cart</button><br>
+            <button class="quick-view" onclick="openPopup('popup2')">Quick View</button>
+
+            <div id="popup2" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('popup2')">&times;</span>
+                    <img src="t2.webp" alt="HRX Sports Shoes">
+                    <h2>HRX Sports Shoes</h2>
+                    <p>Lightweight and durable sports shoes designed for running and training.</p>
+                    <p class="price">$575.00</p>
+                </div>
+            </div>
+        </div>
+
+<!-- Product 3-->
+        <div class="product">
+            <img src="t3.webp" alt="HRX Gray Trackpants">
+            <h3>HRX Gray Trackpants</h3>
+            <p>$250.00</p>
+            
+            <button class="add-to-cart">Add to Cart</button><br>
+            <button class="quick-view" onclick="openPopup('popup3')">Quick View</button>
+            <div id="popup3" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('popup3')">&times;</span>
+                    <img src="t3.webp" alt="HRX Gray Trackpants">
+                    <h2>HRX Gray Trackpants</h2>
+                    <p>we high-perfomance track pants that amplifly your activities lifestyle,engineered with premium Lykra our mens track pants
+
+                    </p>
+                    <p class="price">$250.00</p>
+                   
+                </div>
+            </div>
+        </div>
+<!-- Product 4-->
+        <div class="product">
+            <img src="t4.jpeg"  alt="Blue Printed T-Shirt">
+            <h3>Blue Printed T-Shirt</h3>
+            <p>$355.00</p>
+            
+            <button class="add-to-cart">Add to Cart</button><br>
+            <button class="quick-view" onclick="openPopup('popup4')">Quick View</button>
+            <div id="popup4" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('popup4')">&times;</span>
+                    <img src="t4.jpeg" alt="Blue Printed T-Shirt">
+                    <h2>Blue Printed T-Shirt</h2>
+                    <p>Men's Solid Smart T-Shirts of Blue...Monte Oak Polo Neck T-Shirt Upgrade your wardrobe with the Monte Oak Polo Neck T-Shirt, a perfect blend of comfort and sophistication. Designed for versatility, this t-shirt features a classic polo neck that adds a touch of elegance to any casual or semi-formal look.
+
+                    </p>
+                    <p class="price">$355.00</p>
+                    
+                </div>
+            </div>
+        </div>
+
+ <!-- Product 5-->
+
+    <div class="product">
+        <img src="b1.webp" alt="Sports Bottle">
+        <h3>Sports Bottle</h3>
+        <p>$50.00</p>
+        
+        <button class="add-to-cart">Add to Cart</button><br>
+        <button class="quick-view" onclick="openPopup('popup5')">Quick View</button>
+        <div id="popup5" class="popup">
+                <div class="popup-content">
+                <span class="close" onclick="closePopup('popup5')">&times;</span>
+                <img src="b1.webp" alt="Sports Bottle">
+                <h2>Sports Bottle</h2>
+                <p>best for your daily workout
+
+                </p>
+                <p class="price">$50.00</p>
+            
+            </div>
+    </div>
+</div>
+
+<!-- Product 6-->
+<div class="product">
+    <img src=k1.webp alt="Knee Cap">
+    <h3>Knee Cap</h3>
+    <p>$75.00</p>
+
+    <button class="add-to-cart">Add to Cart</button><br>
+    <button class="quick-view" onclick="openPopup('popup6')">Quick View</button>
+    <div id="popup6" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('popup6')">&times;</span>
+            <img src="k1.webp" alt="Knee Cap">
+            <h2>Knee Cap</h2>
+            <p>nice and fit product in valuable price
+
+            </p>
+            <p class="price">$75.00</p>
+           
+        </div>
+    </div>
+</div>
+
+<!-- Product 7-->
+<div class="product">
+    <img src="h1.jpg" alt="Handgloves">
+    <h3>Handgloves</h3>
+    <p>$45.00</p>
+    
+    <button class="add-to-cart">Add to Cart</button><br>
+    <button class="quick-view" onclick="openPopup('popup7')">Quick View</button>
+    <div id="popup7" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('popup7')">&times;</span>
+            <img src="h1.jpg" alt="Handgloves">
+            <h2>Handgloves</h2>
+            <p>nice and fit product in valuable price
+
+            </p>
+            <p class="price">$45.00</p>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Product 8-->
+<div class="product">
+    <img src="c1.jpeg"  alt="Cap">
+    <h3>Cap</h3>
+    <p>$55.00</p>
+    
+    <button class="add-to-cart">Add to Cart</button><br>
+    <button class="quick-view" onclick="openPopup('popup8')">Quick View</button>
+    <div id="popup8" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('popup8')">&times;</span>
+            <img src="c1.jpeg" alt="Cap">
+            <h2>Cap</h2>
+            <p>Eddico stylish cotton cap
+
+            </p>
+            <p class="price">$55.00</p>
+            
+        </div>
+    </div>
+
+</div>
+
+</section>
+
 </body>
 </html>
