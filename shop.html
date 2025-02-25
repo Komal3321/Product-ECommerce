@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore - eCommerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(to right, #f8dcdc, #fff);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo span {
+            color: red;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .products-section {
+            padding: 50px;
+            text-align: center;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            text-align: center;
+        }
+        .product img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product h3 {
+            margin: 10px 0;
+        }
+        .product p {
+            color: red;
+            font-weight: bold;
+        }
+        .add-to-cart {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .add-to-cart :hover{
+            color:orange;
+        }
+        .view-product {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .view-product {
+            background: orange;
+        }
+    </style>
+    
+</head>
+<header>
+    <nav>
+        <div class="logo">MY<span>STORE</span></div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+   
+            <li><a href="contact.html">Contact</a></li>
+          
+        </ul>
+    </nav>
+</header>
+    <section class="products-section">
+        <h2>All Products</h2>
+        <div class="products-grid">
+            <div class="product">
+                <img src="t1.jpg" alt="Red Printed T-Shirt">
+                <h3>Red Printed T-Shirt</h3>
+                <p>$50.00</p>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+                <a href="#" class="view-product">View Product</a>
+
+
+            </div>
+            <div class="product">
+                <img src="t2.webp" alt="HRX Sports Shoes">
+                <h3>HRX Sports Shoes</h3>
+                <p>$75.00</p>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+                <a href="#" class="view-product">View Product</a>
+
+
+            </div>
+            <div class="product">
+                <img src="t3.webp" alt="HRX Gray Trackpants">
+                <h3>HRX Gray Trackpants</h3>
+                <p>$45.00</p>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+                <a href="#" class="view-product">View Product</a>
+
+
+            </div>
+            <div class="product">
+                <img src="t4.jpeg"  alt="Blue Printed T-Shirt">
+                <h3>Blue Printed T-Shirt</h3>
+                <p>$55.00</p>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+                <a href="#" class="view-product">View Product</a>
+
+
+            </div>
+               <div class="product">
+                <img src="b1.webp" alt="Sports Bottle">
+                <h3>Sports Bottle</h3>
+                <p>$50.00</p>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+                <a href="#" class="view-product">View Product</a>
+
+
+            </div>
+            <div class="product">
+                <img src=k1.webp alt="Knee Cap">
+                <h3>Knee Cap</h3>
+                <p>$75.00</p>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+                <a href="#" class="view-product">View Product</a>
+
+
+            </div>
+            <div class="product">
+                <img src="h1.jpg" alt="Handgloves">
+                <h3>Handgloves</h3>
+                <p>$45.00</p>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+                <a href="#" class="view-product">View Product</a>
+                
+
+
+            </div>
+            <div class="product">
+                <img src="c1.jpeg"  alt="Cap">
+                <h3>Cap</h3>
+                <p>$55.00</p>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+                <a href="#" class="view-product">View Product</a>
+
+
+            </div>
+        </div>
+    </section>
+   
+</body>
+</html>
